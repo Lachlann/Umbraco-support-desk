@@ -1,12 +1,19 @@
 ﻿
 <div ng-controller="SupportDesk" id="SupportDeskControl">
-
-    <p><span>Ask a question</span> / <span>Report a bug</span></p>
-
-    <div class="Question">
-        <h1>Ask your question below:</h1>
-        <input class="" placeholder="How do I..." />
-        <button class="ask">Ask</button>
+    <!--{{ user.id }} {{ user.name }}-->
+    <p><span>Ask a question</span> / <span ng-if="user.userType === 'admin'">/</span> <span ng-if="user.userType === 'admin'">view open questions</span></p>
+    <div class="askQuestionPanel">
+        <div class="Question">
+            <h1>Ask your question below:</h1>
+            <input ng-model="question" class="" placeholder="How do I..." />
+            <button class="ask" ng-click="askQuestion()">Ask</button>
+        </div>
+    </div>
+    <div class="answers">
+        <umb-load-indicator ng-if="answers.loading">
+        </umb-load-indicator>
     </div>
 
 </div>
+
+<!--<umb-editor model="myProperty"></umb-editor>-->

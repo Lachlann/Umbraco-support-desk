@@ -19,6 +19,10 @@ namespace CP.UmbracoSupportDesk.ApplicationEvents
             {
                 db.CreateTable<TicketReply>(false);
             }
+            if (!db.TableExist("USDFaq"))
+            {
+                db.CreateTable<Faq>(false);
+            }
         }
     }
 }
