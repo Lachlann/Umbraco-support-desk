@@ -1,0 +1,45 @@
+﻿#SupportDeskControl {
+width:80%;
+margin: 0 auto;
+}
+.question {
+ margin-top:20px;
+}
+.Question>input {
+    width:80%;
+    padding:2%;
+    font-size:18px;
+    border:1px solid black;
+    display:inline-block;
+    vertical-align:top;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+.Question button.ask {
+    display:inline-block;
+    width:10%;
+    background-color:white;
+    padding:2%;
+     vertical-align:top;
+     border:1px solid black;
+     font-size:18px;
+     line-height:18px;
+}
