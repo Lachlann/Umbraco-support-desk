@@ -10,10 +10,19 @@
         </div>
     </div>
     <div class="answers">
-        <umb-load-indicator ng-if="answers.loading">
+        <umb-load-indicator ng-if="answersLoading">
         </umb-load-indicator>
+        <div class="faq" ng-class="{answered: faq.Answer !==''}" ng-repeat="faq in allfaqs.slice().reverse()">
+            <h3>{{faq.Question}}</h3>
+            <div class="" ng-show="faq.Answer ==='' && user.userType==='admin'">
+                <umb-editor model="rteProp"></umb-editor>
+                <button ng-click="SubmitAnswer(faq.TicketID, faq.Question)">Answer</button>
+            </div>
+            <div ng-bind-html="faq.Answer" ng-if="faq.Answer !==''">
+            
+            </div>
+            
+        </div>
     </div>
 
 </div>
-
-<!--<umb-editor model="myProperty"></umb-editor>-->
